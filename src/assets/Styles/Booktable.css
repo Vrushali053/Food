@@ -95,11 +95,13 @@ button[type="submit"] {
   transition: background-color 0.3s ease;
   display: block;
   margin-top: 2rem; /* Increased space above the button */
-  width: 100%;
+  width: 50%;
+  
+  /* width: 100%; */
 }
 
 button[type="submit"]:hover {
-  background-color: #0a98f7;
+  background-color: #27e3b7;
 }
 
 /* Responsive Design for Mobile and Small Tablets */

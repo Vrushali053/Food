@@ -72,13 +72,14 @@ body {
 }
 
 .primary-btn {
+  
   margin-top: 5px;
   text-align: center;
   background-color: var(--green-2);
   color: black;
   font-size: 1.6rem;
   width: 200px;
-  height: 35px;
+  height: 45px;
   /* padding: 10px 20px; */
   border-radius: 5px;
   transition: background-color 0.3s ease;
