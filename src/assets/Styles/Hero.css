@@ -1,0 +1,170 @@
+/* Global styles */
+:root {
+  --green-1: #26643b;
+  --green-2: #a2de96;
+  --lightGreen-1: #d6e5d8;
+  --lightGreen-2: #f5fcf4;
+  --black-1: #3b413a;
+  --black-2: #3f3c3c;
+  --black-3: #5b6359;
+  --white-1: #e8e8e8;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--lightGreen-2);
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif;
+  visibility: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  line-height: 1.4em;
+  font-size: 1.8rem;
+}
+
+/* Hero Section Styles */
+#hero {
+  padding: 100px 0;
+}
+
+.hero__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero__left {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.hero__left__wrapper {
+  max-width: 500px;
+}
+
+.hero__heading {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--black-1);
+  margin-bottom: 1rem;
+}
+
+.hero__info {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--black-2);
+}
+
+.button__wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  color: var(--green-1);
+  font-size: 2rem; /* Increased font size */
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgba(38, 100, 59, 0.8); /* Faded green on hover */
+  transform: scale(1.05); /* Optional: Slight scaling effect for hover */
+}
+
+.primary-btn {
+  background-color: var(--green-1);
+}
+
+.hero__right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__imgWrapper {
+  max-width: 600px;
+  width: 100%;
+}
+
+.hero__imgWrapper img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 767px) {
+  #hero {
+      padding: 50px 0;
+  }
+
+  .hero__wrapper {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  /* First show image */
+  .hero__right {
+      order: -1; /* Move the image section above the text */
+      width: 100%;
+  }
+
+  .hero__left {
+      padding-right: 0;
+      margin-bottom: 30px;
+  }
+
+  .hero__heading {
+      font-size: 3rem;
+  }
+
+  .hero__info {
+      font-size: 1.6rem;
+  }
+
+  .button__wrapper {
+      display: flex;
+      justify-content: center; /* Center buttons */
+      gap: 15px;
+      flex-wrap: wrap;
+  }
+
+  .btn {
+      width: 45%; /* Buttons side by side */
+      padding: 12px;
+      font-size: 1.4rem;
+  }
+
+  .hero__imgWrapper img {
+      border-radius: 5px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero__heading {
+      font-size: 2.5rem;
+  }
+
+  .hero__info {
+      font-size: 1.4rem;
+  }
+
+  .btn {
+      font-size: 1.2rem;
+  }
+}

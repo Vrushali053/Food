@@ -1,0 +1,175 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:wght@400;500;600&display=swap');
+
+/* Root Variables and Resets */
+:root {
+  --green-1: #26643b;
+  --green-2: #587f50;
+  --lightGreen-2: #f5fcf4;
+  --black-1: #3b413a;
+  --white-1: #fff;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--lightGreen-2);
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.nav {
+  /* background: var(--white-1); */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo img {
+  max-height: 40px;
+}
+
+/* Navbar List */
+.nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.nav__link {
+  color: var(--black-1);
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+  text-decoration: none; /* Removes underline */
+}
+
+.nav__link:hover {
+  color: var(--green-1);
+  text-decoration: none; /* Ensures underline doesn't appear on hover */
+}
+
+.primary-btn {
+  margin-top: 5px;
+  text-align: center;
+  background-color: var(--green-2);
+  color: black;
+  font-size: 1.6rem;
+  width: 200px;
+  height: 35px;
+  /* padding: 10px 20px; */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Removes underline for button links */
+}
+
+.primary-btn:hover {
+  background-color: var(--green-1);
+  text-decoration: none; /* Ensures underline doesn't appear on hover */
+}
+
+/* Mobile Menu */
+.nav__icon {
+  display: none;
+  cursor: pointer;
+}
+
+.nav__list {
+  transform: translateY(-200%);
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  align-items: center;
+  /* background: var(--white-1); */
+  padding: 20px 0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.nav__list.open {
+  transform: translateY(0);
+}
+
+.nav__bgOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.nav__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .nav__icon {
+    display: block;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    transform: translateY(-200%);
+    position: absolute;
+  }
+
+  .nav__bgOverlay {
+    display: block;
+  }
+
+  .nav__close {
+    display: block;
+  }
+
+  .nav__list li {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav__list {
+    flex-direction: row;
+    position: static;
+    transform: none;
+    align-items: center;
+  }
+
+  .nav__icon {
+    display: none;
+  }
+
+  .nav__bgOverlay {
+    display: none;
+  }
+}

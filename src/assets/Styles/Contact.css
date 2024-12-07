@@ -1,0 +1,286 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Container for layout */
+.containere {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Heading Styles */
+h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Contact Form Section */
+#contact-form {
+    background-color: #fff;
+    padding: 4rem 0;
+}
+
+/* Contact Form Wrapper */
+.contact-form__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 3rem 2rem; /* Increased padding for more height */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 450px; /* Ensures a minimum height for the form */
+}
+
+/* Form Groups */
+.contact-form__group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 1rem; /* Increased padding for more space inside the input fields */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #010507;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px; /* Increases height of textarea */
+}
+
+button[type="submit"] {
+    /* padding: 1.5rem; */
+    background-color: #2bf38b;
+    color: black;
+    /* font-size: 1.2rem; */
+    border: none;
+    /* border-radius: 5px; */
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+    display: block;
+    /* margin-top: 1.5rem; */
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0a98f7;
+}
+
+/* Contact Info Section */
+#contact-info {
+    background-color: #fff;
+    padding: 2rem 0;
+}
+
+.contact-info__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-info__item {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-info__item:hover {
+    transform: translateY(-10px);
+}
+
+.contact-info__icon img {
+    max-width: 50px;
+    margin-bottom: 1rem;
+}
+
+.contact-info__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info__text {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Responsive Design for Mobile and Small Tablets */
+@media (max-width: 768px) {
+
+    /* General */
+    body {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .containere {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    /* Contact Form */
+    #contact-form {
+        padding: 4rem 2rem; /* Increased padding for more height */
+    }
+
+    .contact-form__wrapper {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    form {
+        width: 100%;
+        max-width: 100%;
+        min-height: 500px; /* Increased form height */
+    }
+
+    /* Form Inputs */
+    .contact-form__group {
+        margin-bottom: 1rem;
+    }
+
+    input,
+    textarea {
+        font-size: 1.4rem; /* Increased font size */
+        padding: 1rem; /* Increased padding */
+    }
+
+    button[type="submit"] {
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    /* Contact Info Section */
+    #contact-info {
+        padding: 2rem 0;
+    }
+
+    .contact-info__wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact-info__item {
+        flex: none;
+        width: 100%;
+    }
+
+    .contact-info__title {
+        font-size: 1.4rem;
+    }
+
+    .contact-info__text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Further responsiveness for smaller screens (Mobile) */
+@media (max-width: 480px) {
+
+    /* General */
+    body {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    .containere {
+        width: 95%;
+    }
+
+    /* Contact Form */
+    #contact-form {
+        padding: 3rem 2rem; /* Increased padding */
+    }
+
+    .contact-form__wrapper {
+        flex-direction: column;
+    }
+
+    form {
+        width: 100%;
+        padding: 2rem;
+        min-height: 550px; /* Increased height for smaller screens */
+    }
+
+    input,
+    textarea {
+        font-size: 1.5rem; /* Larger font size */
+        padding: 1.2rem; /* Adjust padding */
+    }
+
+    button[type="submit"] {
+        font-size: 1.6rem;
+        padding: 1.5rem;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    /* Contact Info Section */
+    .contact-info__wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact-info__item {
+        flex: none;
+        width: 100%;
+    }
+
+    .contact-info__title {
+        font-size: 1.5rem;
+    }
+
+    .contact-info__text {
+        font-size: 1.3rem;
+    }
+}

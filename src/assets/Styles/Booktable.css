@@ -1,0 +1,194 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.5;
+  font-size: 1.1rem; /* Increase base font size */
+}
+
+/* Container for layout */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Heading Styles */
+.form__title {
+  font-size: 2.4rem; /* Increased font size for the title */
+  margin-bottom: 2.5rem; /* Increased space below the title */
+  text-align: center;
+  color: #333;
+}
+
+/* Form Section */
+#form {
+  background-color: #fff;
+  padding: 4rem 0;
+}
+
+/* Form Wrapper */
+.form__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 3.5rem 2.5rem; /* Increased padding inside the form */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form__group {
+  margin-bottom: 2rem; /* Increased bottom margin between inputs */
+}
+
+label {
+  display: block;
+  font-size: 1.2rem; /* Increased font size for labels */
+  margin-bottom: 0.75rem; /* Increased margin for labels */
+  color: #333;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 1.2rem; /* Increased padding inside input fields */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.1rem; /* Increased font size for input fields */
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #010507;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  padding: 1.8rem; /* Increased padding for the button */
+  background-color: #2bf38b;
+  color: black;
+  font-size: 1.3rem; /* Increased font size for button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin-top: 2rem; /* Increased space above the button */
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #0a98f7;
+}
+
+/* Responsive Design for Mobile and Small Tablets */
+@media (max-width: 768px) {
+  /* General */
+  body {
+      font-size: 1.1rem; /* Slight increase for mobile devices */
+  }
+
+  .form__title {
+      font-size: 2rem; /* Increased font size for the form title */
+  }
+
+  .container {
+      width: 100%;
+      padding: 0 15px;
+  }
+
+  /* Contact Form */
+  #form {
+      padding: 3.5rem 2.5rem;
+  }
+
+  .form__wrapper {
+      flex-direction: column;
+      padding: 0 1rem;
+  }
+
+  form {
+      width: 100%;
+      max-width: 100%;
+  }
+
+  .form__group {
+      margin-bottom: 1.5rem; /* Increased margin for smaller devices */
+  }
+
+  input,
+  select,
+  textarea {
+      font-size: 1.4rem; /* Increased font size for input fields */
+      padding: 1.2rem; /* Adjusted padding */
+  }
+
+  button[type="submit"] {
+      font-size: 1.5rem; /* Increased font size for submit button */
+      padding: 1.8rem;
+      width: 100%;
+  }
+}
+
+/* Further responsiveness for smaller screens (Mobile) */
+@media (max-width: 480px) {
+  /* General */
+  body {
+      font-size: 1.1rem; /* Increased font size */
+  }
+
+  .form__title {
+      font-size: 1.8rem; /* Increased font size for title on small screens */
+  }
+
+  .container {
+      width: 95%;
+  }
+
+  #form {
+      padding: 2.8rem 2rem;
+  }
+
+  .form__wrapper {
+      flex-direction: column;
+  }
+
+  form {
+      width: 100%;
+      padding: 1.8rem;
+  }
+
+  input,
+  select,
+  textarea {
+      font-size: 1.6rem; /* Increased font size */
+      padding: 1.4rem;
+  }
+
+  button[type="submit"] {
+      font-size: 1.7rem; /* Increased font size for the button */
+      padding: 1.8rem;
+      width: 100%;
+  }
+}
