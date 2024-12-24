@@ -6,31 +6,15 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.5;
-  font-size: 1.1rem; /* Increase base font size */
-}
-
-/* Container for layout */
-.container {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-/* Heading Styles */
-.form__title {
-  font-size: 2.4rem; /* Increased font size for the title */
-  margin-bottom: 2.5rem; /* Increased space below the title */
-  text-align: center;
-  color: #333;
+  margin: 0;
+  padding: 0;
+  background: var(--lightGreen-2);
+  font-family: 'Raleway', sans-serif;
 }
 
 /* Form Section */
 #form {
-  background-color: #fff;
+  background: var(--lightGreen-2);
   padding: 4rem 0;
 }
 
@@ -43,21 +27,33 @@ body {
 
 form {
   width: 100%;
-  max-width: 600px;
-  background-color: #fff;
-  padding: 3.5rem 2.5rem; /* Increased padding inside the form */
+  max-width: 900px; /* Increased form width */
+  background: var(--lightGreen-2);
+  padding: 4rem 3rem; /* Increased padding inside the form */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Form Group for Side-by-Side Layout */
+.form__group--half {
+  display: flex;
+  gap: 3rem; /* Increased space between fields */
+  margin-bottom: 3rem; /* Increased margin between rows */
+}
+
+.form__group--half .form__group {
+  flex: 1; /* Each input takes 50% of the container */
+}
+
+/* Form Group Styles */
 .form__group {
-  margin-bottom: 2rem; /* Increased bottom margin between inputs */
+  margin-bottom: 3rem; /* Increased bottom margin */
 }
 
 label {
   display: block;
-  font-size: 1.2rem; /* Increased font size for labels */
-  margin-bottom: 0.75rem; /* Increased margin for labels */
+  font-size: 1.4rem; /* Increased font size for labels */
+  margin-bottom: 1rem; /* Increased margin for labels */
   color: #333;
 }
 
@@ -65,10 +61,10 @@ input,
 select,
 textarea {
   width: 100%;
-  padding: 1.2rem; /* Increased padding inside input fields */
+  padding: 1.4rem; /* Increased padding inside input fields */
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1.1rem; /* Increased font size for input fields */
+  font-size: 1.4rem; /* Increased font size for input fields */
   color: #333;
   transition: border-color 0.3s ease;
 }
@@ -84,113 +80,89 @@ textarea {
   resize: vertical;
 }
 
+/* Submit Button Styles */
 button[type="submit"] {
-  padding: 1.8rem; /* Increased padding for the button */
-  background-color: #2bf38b;
+  
+   /* Increased padding for the button */
+  background-color: var(--green-2);
   color: black;
-  font-size: 1.3rem; /* Increased font size for button */
+  padding: 10px 20px;
+  font-size: 1.6rem; /* Increased font size for button */
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: block;
-  margin-top: 2rem; /* Increased space above the button */
-  width: 50%;
-  
-  /* width: 100%; */
+  margin-top: 2rem;
+  width: 50%; /* Adjusted width */
 }
 
 button[type="submit"]:hover {
-  background-color: #27e3b7;
+  background-color: var(--green-1);
 }
 
 /* Responsive Design for Mobile and Small Tablets */
 @media (max-width: 768px) {
-  /* General */
-  body {
-      font-size: 1.1rem; /* Slight increase for mobile devices */
+  .form__group--half {
+    flex-direction: column; /* Stack fields vertically on smaller screens */
+    gap: 1.5rem; /* Reduced gap between fields */
   }
 
-  .form__title {
-      font-size: 2rem; /* Increased font size for the form title */
-  }
-
-  .container {
-      width: 100%;
-      padding: 0 15px;
-  }
-
-  /* Contact Form */
-  #form {
-      padding: 3.5rem 2.5rem;
-  }
-
-  .form__wrapper {
-      flex-direction: column;
-      padding: 0 1rem;
-  }
-
-  form {
-      width: 100%;
-      max-width: 100%;
-  }
-
-  .form__group {
-      margin-bottom: 1.5rem; /* Increased margin for smaller devices */
+  .form__group--half .form__group {
+    flex: 1; /* Adjusted flex value */
   }
 
   input,
   select,
   textarea {
-      font-size: 1.4rem; /* Increased font size for input fields */
-      padding: 1.2rem; /* Adjusted padding */
+    font-size: 1.6rem; /* Increased font size for input fields */
+    padding: 1.4rem;
   }
 
   button[type="submit"] {
-      font-size: 1.5rem; /* Increased font size for submit button */
-      padding: 1.8rem;
-      width: 100%;
+    font-size: 1.8rem;
+    padding: 2rem;
+    width: 100%;
   }
 }
 
 /* Further responsiveness for smaller screens (Mobile) */
 @media (max-width: 480px) {
-  /* General */
   body {
-      font-size: 1.1rem; /* Increased font size */
+    font-size: 1.3rem; /* Increased font size */
   }
 
   .form__title {
-      font-size: 1.8rem; /* Increased font size for title on small screens */
+    font-size: 2rem; /* Increased font size for title on small screens */
   }
 
   .container {
-      width: 95%;
+    width: 95%;
   }
 
   #form {
-      padding: 2.8rem 2rem;
+    padding: 3rem 2rem;
   }
 
   .form__wrapper {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   form {
-      width: 100%;
-      padding: 1.8rem;
+    width: 100%;
+    padding: 2.2rem;
   }
 
   input,
   select,
   textarea {
-      font-size: 1.6rem; /* Increased font size */
-      padding: 1.4rem;
+    font-size: 1.8rem; /* Increased font size */
+    padding: 1.6rem;
   }
 
   button[type="submit"] {
-      font-size: 1.7rem; /* Increased font size for the button */
-      padding: 1.8rem;
-      width: 100%;
+    font-size: 2rem;
+    padding: 2rem;
+    width: 100%;
   }
 }

@@ -252,7 +252,7 @@ body {
 }
 
 .dishGrid__item__stars img {
-  width: 25px;
+  width: 100px;
 }
 
 /* Discount Section */
@@ -308,7 +308,7 @@ body {
 }
 
 .discount__stars img {
-  width: 40px;
+  width: 100px;
 }
 .ab{
   margin-left: 20px;
@@ -325,7 +325,7 @@ body {
 
 .eventsMedia__wrapper {
   display: flex;
-  gap: 20px; /* Adds space between the images */
+  gap: 20px;
 }
 
 .eventsMedia__1 {
@@ -352,7 +352,7 @@ body {
 }
 
 .eventsMedia__2 {
-  flex: 1; /* Second image will take less space */
+  flex: 1; 
 }
 
 .eventsMedia__2 img {
@@ -363,7 +363,7 @@ body {
 
 @media only screen and (max-width: 767px) {
   .eventsMedia__wrapper {
-    flex-direction: column; /* Stack the images on top of each other on smaller screens */
+    flex-direction: column; 
     gap: 10px;
   }
 

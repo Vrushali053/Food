@@ -47,11 +47,11 @@ function Footer() {
           <div className={styles.footerColumn}>
             <h3 className={styles.footerLinksTitle}>Links</h3>
             <div className={styles.footerLinks}>
-              <a href="/index.html">Home</a>
-              <a href="./menu.html">Menu</a>
-              <a href="./booking.html">Book Table</a>
-              <a href="./about.html">About Us</a>
-              <a href="./contact.html">Contact Us</a>
+              <a href="/Home">Home</a>
+              <a href="./Menu">Menu</a>
+              <a href="./Booktable">Book Table</a>
+              <a href="./About">About Us</a>
+              <a href="/Contact">Contact Us</a>
               <a href="#">Privacy Policy</a>
             </div>
           </div>

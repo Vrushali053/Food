@@ -24,7 +24,7 @@ function Hero() {
               <div className="button__wrapper">
                 <a href="./Menu" className="btn primary-btn">Explore Menu</a>
                 
-                <a href="./Booktable.jsx" className="btn">Book Table</a>
+                <a href="/Booktable" className="btn">Book Table</a>
               </div>
             </div>
           </div>
